@@ -163,7 +163,7 @@ app.get("*", (req, res) => {
   if (req.originalUrl.startsWith("/api")) {
     return res.status(404).json({ error: "API route not found" });
   }
-  res.sendFile(path.join(__dirname, "frontend", "dist", "index.html"));
+  res.sendFile(path.join(__dirname, "client", "dist", "index.html"));
 });
 
 server.listen(PORT, () => {
